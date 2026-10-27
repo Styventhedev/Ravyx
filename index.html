@@ -3,196 +3,375 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b14">
-  <meta name="description" content="RAVYX, le bot Discord de Styventhedev.">
-  <title>RAVYX — Discord Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="RAVYX, bot Discord de Styventhedev : informations, modération, configuration et sécurité.">
+  <title>RAVYX — Discord Bot | Styventhedev</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
+
 <body>
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="RAVYX accueil">
+      <span class="brand-icon">R</span>
+      <span>RAVYX<span class="brand-dot">.</span></span>
+    </a>
 
-<header class="navbar">
-  <a href="#accueil" class="logo"><span>R</span> RAVYX<span class="cyan">.</span></a>
+    <button class="menu-toggle" id="menu-toggle"
+      aria-label="Ouvrir le menu" aria-expanded="false"
+      aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <button id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Accueil</a>
+      <a href="#features">Fonctionnalités</a>
+      <a href="#commands">Commandes</a>
+      <a href="#about">À propos</a>
+      <a class="nav-cta" href="#invite">Invitation</a>
+    </nav>
+  </header>
 
-  <nav id="menu">
-    <a href="#fonctionnalites">Fonctionnalités</a>
-    <a href="#commandes">Commandes</a>
-    <a href="#apropos">À propos</a>
-    <a href="#inviter" class="nav-button">Inviter le bot ↗</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero" id="accueil">
-    <div class="hero-content">
-      <div class="status"><span></span> PROJET EN DÉVELOPPEMENT</div>
-
-      <h1>Ton serveur.<br>
-        <span class="gradient">Tes règles.</span><br>
-        Un seul bot.
-      </h1>
-
-      <p>
-        RAVYX est un bot Discord polyvalent conçu pour aider
-        à organiser et gérer ta communauté.
-        Un projet indépendant signé Styventhedev.
-      </p>
-
-      <div class="actions">
-        <a href="#fonctionnalites" class="btn primary">Découvrir RAVYX ↗</a>
-        <a href="#apropos" class="btn secondary">En savoir plus</a>
-      </div>
-
-      <div class="credits">
-        Développé par <strong>Styventhedev</strong> · Gratuit à découvrir
-      </div>
-    </div>
-
-    <div class="visual">
-      <div class="orbit"></div>
-      <div class="bot-card">
-        <div class="card-top">
-          <span class="mini-logo">R</span>
-          <span>RAVYX CORE</span>
-          <span class="card-dots">•••</span>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="status">
+          <span class="status-dot"></span>
+          PROJET DISCORD • STYVENTHEDEV
         </div>
 
-        <div class="big-r">R<span>.</span></div>
-        <h2>RAVYX</h2>
-        <p>DISCORD BOT</p>
+        <h1>Ton serveur.<br> Tes règles.<br>
+          <span class="gradient-text">RAVYX.</span>
+        </h1>
 
-        <div class="bars">
-          <i></i><i></i><i></i><i></i><i></i>
-          <i></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
-
-      <div class="floating one">✦ Modération</div>
-      <div class="floating two">⌘ Multi-fonctions</div>
-    </div>
-  </section>
-
-  <section class="ticker">
-    MODÉRATION ✳ ORGANISATION ✳ COMMUNAUTÉ ✳ RAVYX CORE ✳
-  </section>
-
-  <section class="section" id="fonctionnalites">
-    <div class="eyebrow">01 / FONCTIONNALITÉS</div>
-    <h2>Un serveur plus <span class="gradient">simple à gérer.</span></h2>
-    <p class="section-intro">
-      Une vision polyvalente pour centraliser les outils utiles
-      à ta communauté. Les fonctions ci-dessous sont des objectifs
-      de présentation : leur disponibilité dépend du code du bot.
-    </p>
-
-    <div class="grid">
-      <article class="feature">
-        <div class="feature-icon">⌁</div>
-        <span class="number">01</span>
-        <h3>Modération</h3>
-        <p>Des outils pour aider le staff à faire respecter les règles et limiter le spam.</p>
-      </article>
-
-      <article class="feature">
-        <div class="feature-icon">▦</div>
-        <span class="number">02</span>
-        <h3>Organisation</h3>
-        <p>Une meilleure organisation des salons, des rôles et de la communauté.</p>
-      </article>
-
-      <article class="feature">
-        <div class="feature-icon">✧</div>
-        <span class="number">03</span>
-        <h3>Aide & support</h3>
-        <p>Des outils pour guider les membres et faciliter les échanges avec le staff.</p>
-      </article>
-
-      <article class="feature">
-        <div class="feature-icon">⌘</div>
-        <span class="number">04</span>
-        <h3>Évolutif</h3>
-        <p>Un projet indépendant qui évoluera selon les besoins de ses utilisateurs.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" id="commandes">
-    <div class="eyebrow">02 / COMMANDES</div>
-    <h2>Rapide. Clair. <span class="gradient">Efficace.</span></h2>
-    <p class="section-intro">
-      Aperçu de présentation. Ces commandes sont des exemples
-      et ne sont pas garanties fonctionnelles dans le bot actuel.
-    </p>
-
-    <div class="terminal">
-      <div class="terminal-header">
-        <div class="lights"><i></i><i></i><i></i></div>
-        <span>ravyx://commandes</span>
-        <span class="preview">APERÇU</span>
-      </div>
-
-      <div class="command">
-        <span>!</span><strong>help</strong>
-        <p>Afficher l'aide du bot</p>
-      </div>
-      <div class="command">
-        <span>!</span><strong>mod</strong>
-        <p>Commandes de modération · à configurer</p>
-      </div>
-      <div class="command">
-        <span>!</span><strong>support</strong>
-        <p>Accéder au support · à configurer</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="apropos">
-    <div class="about-card">
-      <div class="about-logo">R<span>.</span></div>
-
-      <div>
-        <div class="eyebrow">03 / LE PROJET</div>
-        <h2>Conçu pour la communauté.</h2>
-        <p>
-          RAVYX est un projet indépendant développé par
-          <strong>Styventhedev</strong>. Son identité mélange
-          une ambiance cyberpunk sombre, des accents bleu néon
-          et une interface moderne.
+        <p class="hero-description">
+          Un bot Discord pensé pour centraliser les outils
+          d'information, de modération et de configuration
+          de ton serveur.
         </p>
 
-        <div class="tags">
-          <span>CYBER NOIR</span>
-          <span>BLUE NEON</span>
-          <span>EN DÉVELOPPEMENT</span>
+        <div class="hero-buttons">
+          <a href="#commands" class="button button-primary">
+            Découvrir les commandes <span>↗</span>
+          </a>
+          <a href="#features" class="button button-secondary">
+            Explorer le projet
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span><span class="mini-dot"></span> Préfixe : <code>!</code></span>
+          <span>Développé par Styventhedev</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="inviter">
-    <div class="invite-card">
-      <div class="eyebrow">PRÊT À DÉCOUVRIR ?</div>
-      <h2>RAVYX arrive sur<br><span class="gradient">ton serveur.</span></h2>
-      <p>Le lien officiel d'invitation sera ajouté ici prochainement.</p>
+      <div class="hero-visual" aria-label="Identité visuelle RAVYX">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="glow"></div>
 
-      <!-- Remplace ce bouton par le lien Discord quand il sera disponible. -->
-      <button class="btn primary disabled" disabled>
-        Invitation bientôt disponible
-      </button>
+        <div class="logo-card">
+          <div class="logo-symbol">R</div>
+          <div class="logo-name">RAVYX</div>
+          <div class="logo-caption">DISCORD BOT</div>
+          <div class="logo-line"></div>
+          <div class="logo-footer">STYVENTHEDEV // PROJECT</div>
+        </div>
 
-      <div class="credits">Un projet signé Styventhedev</div>
-    </div>
-  </section>
-</main>
+        <div class="floating-tag tag-top">SYSTEM // RAVYX</div>
+        <div class="floating-tag tag-bottom">PREFIX : !</div>
+      </div>
+    </section>
 
-<footer>
-  <a href="#accueil" class="logo"><span>R</span> RAVYX<span class="cyan">.</span></a>
-  <p>© <span id="year"></span> Styventhedev · Projet indépendant</p>
-  <a href="#accueil">Retour en haut ↑</a>
-</footer>
+    <section class="features section" id="features">
+      <div class="section-heading">
+        <span class="eyebrow">01 // FONCTIONNALITÉS</span>
+        <h2>Un centre de contrôle <span class="gradient-text">centralisé.</span></h2>
+        <p>Les principales catégories disponibles dans le menu d'aide de RAVYX.</p>
+      </div>
 
-<script src="script.js"></script>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3>Informations</h3>
+          <p>Consulte les informations du bot, du serveur et des membres.</p>
+          <a href="#commands">Voir les commandes ↗</a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Modération</h3>
+          <p>Retrouve les commandes de sanctions, d'avertissement et de nettoyage.</p>
+          <a href="#commands">Voir les commandes ↗</a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>Configuration</h3>
+          <p>Accède aux commandes de configuration, au panneau et aux options de sécurité.</p>
+          <a href="#commands">Voir les commandes ↗</a>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">❓</div>
+          <h3>Centre d'aide</h3>
+          <p>Utilise la commande d'aide pour retrouver les commandes du bot.</p>
+          <a href="#commands">Voir les commandes ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="commands-section section" id="commands">
+      <div class="section-heading">
+        <span class="eyebrow">02 // COMMAND CENTER</span>
+        <h2>Les commandes <span class="gradient-text">RAVYX.</span></h2>
+        <p>Retrouve ici les commandes affichées dans le centre d'aide du bot.</p>
+      </div>
+
+      <div class="command-toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="command-search"
+            placeholder="Rechercher une commande..."
+            aria-label="Rechercher une commande">
+        </label>
+
+        <div class="filter-list" aria-label="Filtrer les commandes">
+          <button class="filter-button active" data-filter="all" aria-pressed="true">Toutes</button>
+          <button class="filter-button" data-filter="info" aria-pressed="false">Informations</button>
+          <button class="filter-button" data-filter="mod" aria-pressed="false">Modération</button>
+          <button class="filter-button" data-filter="config" aria-pressed="false">Configuration</button>
+          <button class="filter-button" data-filter="help" aria-pressed="false">Aide</button>
+        </div>
+      </div>
+
+      <div class="commands-grid" id="commands-grid">
+
+        <article class="command-card" data-category="info">
+          <div class="command-card-top">
+            <span class="command-category">📡 INFORMATIONS</span>
+            <span class="command-number">01</span>
+          </div>
+          <h3><code>!ping</code></h3>
+          <p>Affiche la vitesse de réponse du bot.</p>
+          <button class="copy-command" data-command="!ping">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="info">
+          <div class="command-card-top">
+            <span class="command-category">📡 INFORMATIONS</span>
+            <span class="command-number">02</span>
+          </div>
+          <h3><code>!status</code></h3>
+          <p>Consulte l'état du bot.</p>
+          <button class="copy-command" data-command="!status">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="info">
+          <div class="command-card-top">
+            <span class="command-category">📡 INFORMATIONS</span>
+            <span class="command-number">03</span>
+          </div>
+          <h3><code>!server</code></h3>
+          <p>Affiche les informations du serveur Discord.</p>
+          <button class="copy-command" data-command="!server">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="info">
+          <div class="command-card-top">
+            <span class="command-category">📡 INFORMATIONS</span>
+            <span class="command-number">04</span>
+          </div>
+          <h3><code>!userinfo</code></h3>
+          <p>Affiche les informations d'un membre.</p>
+          <button class="copy-command" data-command="!userinfo">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="info">
+          <div class="command-card-top">
+            <span class="command-category">📡 INFORMATIONS</span>
+            <span class="command-number">05</span>
+          </div>
+          <h3><code>!avatar</code></h3>
+          <p>Affiche la photo de profil d'un membre.</p>
+          <button class="copy-command" data-command="!avatar">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">06</span>
+          </div>
+          <h3><code>!kick @membre raison</code></h3>
+          <p>Expulse un membre du serveur.</p>
+          <button class="copy-command" data-command="!kick @membre raison">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">07</span>
+          </div>
+          <h3><code>!ban @membre raison</code></h3>
+          <p>Bannit un membre du serveur.</p>
+          <button class="copy-command" data-command="!ban @membre raison">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">08</span>
+          </div>
+          <h3><code>!mute @membre 10m</code></h3>
+          <p>Rend un membre muet selon les paramètres pris en charge par le bot.</p>
+          <button class="copy-command" data-command="!mute @membre 10m">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">09</span>
+          </div>
+          <h3><code>!unmute @membre</code></h3>
+          <p>Retire le mute d'un membre.</p>
+          <button class="copy-command" data-command="!unmute @membre">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">10</span>
+          </div>
+          <h3><code>!warn @membre</code></h3>
+          <p>Envoie un avertissement à un membre.</p>
+          <button class="copy-command" data-command="!warn @membre">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">11</span>
+          </div>
+          <h3><code>!warns @membre</code></h3>
+          <p>Consulte les avertissements d'un membre.</p>
+          <button class="copy-command" data-command="!warns @membre">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="mod">
+          <div class="command-card-top">
+            <span class="command-category">🛡️ MODÉRATION</span>
+            <span class="command-number">12</span>
+          </div>
+          <h3><code>!clear 10</code></h3>
+          <p>Supprime le nombre de messages indiqué, dans les limites acceptées par le bot.</p>
+          <button class="copy-command" data-command="!clear 10">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="config">
+          <div class="command-card-top">
+            <span class="command-category">⚙️ CONFIGURATION</span>
+            <span class="command-number">13</span>
+          </div>
+          <h3><code>!setup</code></h3>
+          <p>Ouvre la configuration du bot.</p>
+          <button class="copy-command" data-command="!setup">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="config">
+          <div class="command-card-top">
+            <span class="command-category">⚙️ CONFIGURATION</span>
+            <span class="command-number">14</span>
+          </div>
+          <h3><code>!panel</code></h3>
+          <p>Ouvre le panneau du bot.</p>
+          <button class="copy-command" data-command="!panel">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="config">
+          <div class="command-card-top">
+            <span class="command-category">⚙️ CONFIGURATION</span>
+            <span class="command-number">15</span>
+          </div>
+          <h3><code>!security</code></h3>
+          <p>Accède aux options de sécurité.</p>
+          <button class="copy-command" data-command="!security">Copier la commande</button>
+        </article>
+
+        <article class="command-card" data-category="help">
+          <div class="command-card-top">
+            <span class="command-category">❓ AIDE</span>
+            <span class="command-number">16</span>
+          </div>
+          <h3><code>!help</code></h3>
+          <p>Affiche le menu d'aide du bot.</p>
+          <button class="copy-command" data-command="!help">Copier la commande</button>
+        </article>
+
+      </div>
+
+      <p class="no-results" id="no-results" hidden>
+        Aucune commande ne correspond à ta recherche.
+      </p>
+
+      <p class="command-note">
+        Les commandes avec <code>@membre</code> nécessitent une mention
+        ou un format accepté par le bot. Les permissions et paramètres
+        dépendent de sa configuration.
+      </p>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-panel">
+        <div class="about-content">
+          <span class="eyebrow">03 // LE PROJET</span>
+          <h2>Développé par <span class="gradient-text">Styventhedev.</span></h2>
+          <p>
+            RAVYX est un projet de bot Discord conçu pour réunir
+            des commandes d'information, de modération et de configuration
+            dans une interface simple à utiliser.
+          </p>
+          <a class="button button-secondary"
+             href="https://github.com/Styventhedev"
+             target="_blank" rel="noopener noreferrer">
+            Voir GitHub ↗
+          </a>
+        </div>
+
+        <div class="about-mark" aria-hidden="true">R<span>/</span></div>
+      </div>
+    </section>
+
+    <section class="invite-section section" id="invite">
+      <div class="invite-panel">
+        <span class="eyebrow">04 // REJOINDRE RAVYX</span>
+        <h2>Prêt à découvrir <span class="gradient-text">RAVYX ?</span></h2>
+        <p>
+          Le lien d'invitation du bot sera ajouté ici lorsqu'il sera disponible.
+        </p>
+        <button class="button button-disabled" disabled>
+          Invitation bientôt disponible
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">R</span>
+      <span>RAVYX<span class="brand-dot">.</span></span>
+    </a>
+
+    <p>© <span id="year"></span> STYVENTHEDEV — RAVYX PROJECT</p>
+
+    <a href="https://github.com/Styventhedev"
+       target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
